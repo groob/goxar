@@ -402,7 +402,7 @@ func fileChecksumFromXml(f *FileChecksum, x *xmlFileChecksum) (err error) {
 	switch x.Style {
 	case "MD5":
 		f.Kind = FileChecksumKindMD5
-	case "SHA1":
+	case "SHA1", "sha1":
 		f.Kind = FileChecksumKindSHA1
 	default:
 		return ErrChecksumUnsupported
